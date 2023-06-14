@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
-    <title>CMLABS Test</title>
+    <title>CMLABS Frontend Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <p class="text-xl">First Commit</p>
+    
+    <header class="w-screen fixed top-0 z-10 bg-white">
+        <div class="border-b flex justify-between items-center w-[1350px] mx-auto py-4">
+            <a href="/src/index.html" class="text-xl font-medium text-gray-700">mealapp</a>
+            <div class="flex text-sm font-medium text-gray-500">
+                <a class="cursor-pointer hover:text-sky-700">Home</a>
+                <a class="ml-7 cursor-pointer hover:text-sky-700">Foods</a>
+                <a class="ml-7 cursor-pointer hover:text-sky-700">Ingredients</a>
+                <a class="ml-7 cursor-pointer hover:text-sky-700">Local Culinary</a>
+            </div>
+        </div>
+    </header>
+    <main class="w-screen min-h-[910px] mt-14" style="background-image: url('./assets/background.png');">
+        <section class="bg-sky-800 bg-opacity-10 py-24">
+            <div class="w-full md:w-[1350px] mx-auto flex flex-col items-center">
+                <div class="flex justify-between w-28">
+                    <img src="./assets/bowl.png" width="24">
+                    <img src="./assets/cooker.png" width="24">
+                    <img src="./assets/cookies.png" width="24">
+                </div>
+                <p class="font-medium text-sky-950 py-4">mealapp API website</p>
+                <p class="text-5xl font-bold text-sky-900">See All The Delicious Foods</p>
+            </div>
+        </section>
+        <section class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-4 gap-4 py-24">
+            <a href="/src/category-detail.html" class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
+            </a>
+            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
+            </a>
+            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
+            </a>
+            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
+            </a>
+            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
+            </a>
+            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
+            </a>
+        </section>
+    </main>
+    <footer class="w-[1350px] mx-auto py-4 text-gray-400 text-center font-medium text-xs bg-white uppercase rounded">&copy; 2023 CMLABS Frontend Pre-Test Assignment | Created by: <a href="https://github.com/kadekframa" target="blank" class="hover:text-sky-200">Kadek Frama</a></footer>
+
     <script src="app.js"></script>
 </body>
 </html>
