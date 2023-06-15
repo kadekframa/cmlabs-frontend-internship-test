@@ -32,29 +32,17 @@
                 <p class="text-5xl font-bold text-sky-900">See All The Delicious Foods</p>
             </div>
         </section>
-        <section class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-4 gap-4 py-24">
-            <a href="/src/category-detail.html" class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
+        <section id="category-items-container" class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-4 gap-4 py-24">
+            <!-- <a href="/src/category-detail.html" class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
                 <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
-            </a>
-            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
-                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
-            </a>
-            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
-                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
-            </a>
-            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
-                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
-            </a>
-            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/beef.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
-                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Beef</div>
-            </a>
-            <a class="relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url('https://www.themealdb.com/images/category/chicken.png')] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer">
-                <div class="absolute text-center bg-black top-0 left-0 w-full h-full bg-opacity-30 rounded-2xl hover:bg-opacity-0 hover:opacity-30 hover:scale-110 duration-500 flex items-center justify-center">Chicken</div>
-            </a>
+            </a> -->
         </section>
     </main>
     <footer class="w-[1350px] mx-auto py-4 text-gray-400 text-center font-medium text-xs bg-white uppercase rounded">&copy; 2023 CMLABS Frontend Pre-Test Assignment | Created by: <a href="https://github.com/kadekframa" target="blank" class="hover:text-sky-200">Kadek Frama</a></footer>
 
     <script src="app.js"></script>
+    <script>
+        listCategory('category-items-container');
+    </script>
 </body>
 </html>
