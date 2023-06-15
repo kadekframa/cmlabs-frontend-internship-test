@@ -135,6 +135,7 @@ buttonLoadMore.addEventListener("click", () => {
   limitCategoryDetail = limitCategoryDetail + 8;
   renderCategoryDetails("category-details-container");
 
+  // Check "limitCategoryDetail" variable to display icon loading properly.
   if (
     limitCategoryDetail >
     JSON.parse(localStorage.getItem("dataCategoryDetails")).length

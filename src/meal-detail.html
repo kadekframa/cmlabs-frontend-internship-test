@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>CMLABS Frontend Test</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
@@ -30,13 +32,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
-                <a href="" class=" text-xs text-gray-500 font-medium mx-1">Home</a>
+                <a href="/src/index.html" class=" text-xs text-gray-500 font-medium mx-1">Home</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="gray" class="w-3 h-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
     
-                <a href="" class="text-xs text-gray-500 font-medium mx-1">Foods</a>
+                <a href="/src/index.html" class="text-xs text-gray-500 font-medium mx-1">Foods</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="gray" class="w-3 h-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -46,21 +48,48 @@
                     class="w-3 h-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
-                <a href="" class="text-xs text-gray-400 opacity-60 font-medium mx-1">Fettucine alfredo</a>
+                <p id="meal-detail-breadcrumb" class="text-xs text-gray-400 opacity-60 font-medium mx-1">
+                    <!-- Meal Breadcrumb -->
+                </p>
             </div>
-            <p class="text-[45px] mt-6 text-gray-700">Fettucine alfredo</p>
+            <p id="meal-title" class="text-[45px] mt-6 text-gray-700">
+                <!-- Meal Title -->
+            </p>
         </section>
-        <section class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-4 gap-4 py-10">
-            detail
+        <section class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-[minmax(0px,_48%)_minmax(0px,_52%)] gap-5 py-10">
+            <div class="rounded-2xl">
+                <img id="meal-image" src="" class="rounded-2xl bg-contain shadow-xl" alt="Meal Image" title="Meal Image">
+            </div>
+            <div class="">
+                <p class="text-3xl text-gray-700">Intructions</p>
+                <p id="instructions" class="mt-4 text-gray-600">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
+                is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
+                is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
+                is available.</p>
+                <p class="text-3xl text-gray-700 mt-6">Recipes</p>
+                <ul id="recipes" class="mt-4 pl-5 text-gray-600" style="list-style-type: circle;">
+                    <!-- List of Recipes -->
+                </ul>
+            </div>
         </section>
 
-        <section>Video Tutorial</section>
+        <section class="w-[1020px] mx-auto py-8">
+            <p class="text-3xl text-gray-700 text-center">Tutorials</p>
+            <iframe id="video-tutorial" class="w-full h-[600px] mt-5" src="https://www.youtube.com/embed/2G07UOqU2e8">
+            </iframe>
+        </section>
     </main>
     <footer class="w-[1350px] mx-auto py-4 text-gray-400 text-center font-medium text-xs bg-white uppercase rounded">
         &copy; 2023 CMLABS Frontend Pre-Test Assignment | Created by: <a href="https://github.com/kadekframa"
             target="blank" class="hover:text-sky-200">Kadek Frama</a></footer>
 
-    <!-- <script src="app.js"></script> -->
+    <script src="meal-detail.js"></script>
+    <script>
+        renderMealDetail();
+    </script>
 </body>
 
 </html>
