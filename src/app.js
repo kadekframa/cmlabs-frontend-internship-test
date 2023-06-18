@@ -45,7 +45,7 @@ const setCategoryName = (category) => {
 
 const cardCategory = (category) => {
   const anchor = document.createElement("a");
-  anchor.setAttribute("href", "/src/category-detail.html");
+  anchor.setAttribute("href", "category-detail.html");
   anchor.setAttribute(
     "class",
     `relative text-white text-2xl font-bold rounded-2xl flex justify-center items-center bg-[url(${category.strCategoryThumb})] bg-contain bg-no-repeat bg-center h-40 hover:scale-105 duration-300 cursor-pointer`

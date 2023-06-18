@@ -27,24 +27,28 @@ const fetchMealDetail = async (id) => {
 };
 
 // Render page Meal Details.
-const renderMealDetail = () => {
-  // Set category title for Category Detail Page.
-  //   categoryTitle.innerHTML = getCategoryName;
+const renderMealDetail = (container) => {
+  // Declare wrapper of list category detail in Page Category Detail.
+  const mealDetailContainer = document.getElementById(container);
 
-  // Set breadcrumb name for Category Detail Page.
-  //   categoryBreadCrumb.innerHTML = getCategoryName;
+  // Validation to check if wrapper is not exist.
+  if (!mealDetailContainer) {
+    return;
+  }
 
   // Set Loading Display.
+  const breadcrumbLoading = document.createElement("div");
+  breadcrumbLoading.setAttribute(
+    "class",
+    "border w-1/3 p-3 rounded-full bg-slate-200"
+  );
 
-  // Set Timeout method will get data from localstorage after 100 miliseconds.
-  setTimeout(() => {
-    // get data from localstorage, then parse the data to be javascript object.
-    const idMeal = localStorage.getItem("idMeal");
+  // get data from localstorage, then parse the data to be javascript object.
+  const idMeal = localStorage.getItem("idMeal");
 
-    // Call "fetchMealDetail" to fetching data with parameter "getMealId" which get from local storage.
-    fetchMealDetail(idMeal);
-    console.info("test fetch");
-  }, 100);
+  // Call "fetchMealDetail" to fetching data with parameter "getMealId" which get from local storage.
+  fetchMealDetail(idMeal);
+  console.info("test fetch");
 
   // Set Timeout method will get data from localstorage after 500 miliseconds.
   setTimeout(() => {

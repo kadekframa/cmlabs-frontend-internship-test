@@ -101,7 +101,7 @@ const renderCategoryDetails = (categoriesDetailContainer) => {
 // Function "cardCategoryDetail" will create elements that will displayed into Page Category Detail.
 const cardCategoryDetail = (meal) => {
   const anchor = document.createElement("a");
-  anchor.setAttribute("href", "/src/meal-detail.html");
+  anchor.setAttribute("href", "meal-detail.html");
   anchor.setAttribute(
     "class",
     `relative text-white text-xl font-semibold rounded-2xl flex justify-center items-center bg-[url(${meal.strMealThumb})] h-60 bg-cover bg-no-repeat bg-center hover:scale-105 duration-300 shadow-lg cursor-pointer`
