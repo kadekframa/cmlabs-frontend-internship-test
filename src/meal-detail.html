@@ -26,58 +26,78 @@
     </header>
     <main id="meal-detail-container" class="w-screen min-h-[910px] mt-14 bg-cover" style="background-image: url('./assets/background3.png');">
         <section class="w-[1020px] mx-auto py-7 border-b">
-            <div class="flex items-center border">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-                <a href="/src/index.html" class=" text-xs text-gray-500 font-medium mx-1">Home</a>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-                
-                <a href="/src/index.html" class="text-xs text-gray-500 font-medium mx-1">Foods</a>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-                <a href="" class="text-xs text-gray-500 font-medium mx-1">Pasta</a>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-                <p id="meal-detail-breadcrumb" class="text-xs text-gray-400 opacity-60 font-medium mx-1">
-                    <!-- Meal Breadcrumb -->
-                </p>
-                <div class="border w-1/3 p-3 rounded-full bg-slate-100 animate-pulse"></div>
+            <div class="flex items-center">
+                <div id="meal-detail-breadcrumb-wrapper" class="hidden items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <a href="/src/index.html" class=" text-xs text-gray-500 font-medium mx-1">Home</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    
+                    <a href="/src/index.html" class="text-xs text-gray-500 font-medium mx-1">Foods</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <a href="" class="text-xs text-gray-500 font-medium mx-1">Pasta</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="gray" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <p id="meal-detail-breadcrumb" class="text-xs text-gray-400 opacity-60 font-medium mx-1">
+                        Meal Breadcrumb
+                    </p>
+                </div>
+
+                <!-- Breadcrumb Loading -->
+                <div id="meal-detail-breadcrumb-loading" class="w-1/3 p-3 rounded-full bg-slate-100 animate-pulse"></div>
             </div>
             
-            <p id="meal-title" class="text-[45px] mt-6 text-gray-700">
+            <p id="meal-title" class="text-[45px] mt-6 text-gray-700 hidden">
                 <!-- Meal Title -->
+            </p>
+
+            <!-- Meal Title Loading -->
+            <p id="meal-title-loading" class="mt-6 w-2/5 p-8 rounded-full bg-slate-100 animate-pulse">
             </p>
         </section>
         <section class="w-[1020px] mx-auto grid grid-col-1 md:grid-cols-[minmax(0px,_48%)_minmax(0px,_52%)] gap-5 py-10">
-            <div class="rounded-2xl">
+            <div id="image-meal-wrapper" class="hidden rounded-2xl h-[488px]">
                 <img id="meal-image" src="" class="rounded-2xl bg-contain shadow-xl" alt="Meal Image" title="Meal Image">
             </div>
+
+            <!-- Image Loading -->
+            <div id="image-meal-wrapper-loading" class="rounded-2xl h-[488px] bg-slate-100 animate-pulse"></div>
+
             <div class="">
                 <p class="text-3xl text-gray-700">Intructions</p>
-                <p id="instructions" class="mt-4 text-gray-600">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-                is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-                is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-                document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-                is available.</p>
+                <p id="instructions" class="hidden mt-4 text-gray-600">
+                    <!-- Intructions Content -->
+                </p>
+
+                <!-- Intructions Loading -->
+                <p id="instructions-loading" class="rounded-2xl mt-4 text-gray-600 h-56 bg-slate-100 animate-pulse">
+                </p>
                 <p class="text-3xl text-gray-700 mt-6">Recipes</p>
-                <ul id="recipes" class="mt-4 pl-5 text-gray-600" style="list-style-type: circle;">
+                <ul id="recipes" class="hidden mt-4 pl-5 text-gray-600" style="list-style-type: circle;">
                     <!-- List of Recipes -->
+                </ul>
+
+                <!-- List of Recipes Loading -->
+                <ul id="recipes-loading" class="mt-4 pl-5 text-gray-600 rounded-2xl h-36 bg-slate-100 animate-pulse" style="list-style-type: circle;">
                 </ul>
             </div>
         </section>
 
         <section class="w-[1020px] mx-auto py-8">
             <p class="text-3xl text-gray-700 text-center">Tutorials</p>
-            <iframe id="video-tutorial" class="w-full h-[600px] mt-5" src="https://www.youtube.com/embed/2G07UOqU2e8">
+            <iframe id="video-tutorial" class="hidden w-full h-[600px] mt-5" src="https://www.youtube.com/embed/2G07UOqU2e8">
+            </iframe>
+
+            <!-- iframe loading -->
+            <iframe id="video-tutorial-loading" class="w-full h-[600px] mt-5 bg-slate-100 animate-pulse">
             </iframe>
         </section>
     </main>

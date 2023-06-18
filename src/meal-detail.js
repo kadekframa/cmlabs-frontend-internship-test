@@ -1,14 +1,27 @@
 // Variable Declaration.
 let mealBreadCrumb = document.getElementById("meal-detail-breadcrumb");
-let mealTitle = document.getElementById("meal-title");
+let breadCrumbWrapper = document.getElementById(
+  "meal-detail-breadcrumb-wrapper"
+);
+let breadCrumbLoading = document.getElementById(
+  "meal-detail-breadcrumb-loading"
+);
 
-// const iconLoader = document.getElementById("icon-loader");
-// const iconLoading = document.getElementById("icon-loading");
+let mealTitle = document.getElementById("meal-title");
+let mealTitleLoading = document.getElementById("meal-title-loading");
 
 const imageMeal = document.getElementById("meal-image");
+const imageMealWrapper = document.getElementById("image-meal-wrapper");
+const imageMealLoading = document.getElementById("image-meal-wrapper-loading");
+
 const instructions = document.getElementById("instructions");
+const instructionsLoading = document.getElementById("instructions-loading");
+
 const recipes = document.getElementById("recipes");
+const recipesLoading = document.getElementById("recipes-loading");
+
 const videoTutorial = document.getElementById("video-tutorial");
+const videoTutorialLoading = document.getElementById("video-tutorial-loading");
 
 // Fetching data from API endpoint asynchronously.
 const fetchMealDetail = async (id) => {
@@ -50,12 +63,38 @@ const renderMealDetail = (container) => {
   fetchMealDetail(idMeal);
   console.info("test fetch");
 
+  // setTimeout(() => {
+  //   imageMealLoading.classList.add("hidden");
+  // }, 400);
+
   // Set Timeout method will get data from localstorage after 500 miliseconds.
   setTimeout(() => {
     const getMealId = JSON.parse(localStorage.getItem("dataMealDetails"));
     let dataMeal = getMealId[0];
 
     console.info(getMealId[0]);
+
+    /* Set Loading */
+    breadCrumbLoading.classList.add("hidden");
+    breadCrumbWrapper.classList.remove("hidden");
+    breadCrumbWrapper.classList.add("flex");
+
+    mealTitleLoading.classList.add("hidden");
+    mealTitle.classList.remove("hidden");
+
+    imageMealWrapper.classList.remove("hidden");
+    imageMealLoading.classList.add("hidden");
+
+    instructionsLoading.classList.add("hidden");
+    instructions.classList.remove("hidden");
+
+    recipesLoading.classList.add("hidden");
+    recipes.classList.remove("hidden");
+
+    videoTutorialLoading.classList.add("hidden");
+    videoTutorial.classList.remove("hidden");
+    /* Set Loading End */
+
     mealTitle.innerHTML = dataMeal.strMeal;
     mealBreadCrumb.innerHTML = dataMeal.strMeal;
     imageMeal.src = dataMeal.strMealThumb;
